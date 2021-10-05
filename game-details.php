@@ -1,3 +1,7 @@
+<?php
+    require_once("functions.php");
+    $game = $games[$_GET["index"]];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,14 +42,15 @@
         <!-- ======= Header ======= -->
         <header id="header" class="header">
             <div class="container d-flex align-items-center justify-content-between">
+
                 <div class="logo">
                     <div class="row">
                         <div class="col-xs-2 col-sm-2 col-md-2">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="assets/img/logo1.png" alt="" class="img-fluid">
                             </a>
                         </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8">
+                        <div class="col-xs-8 col-sm-8 col-md-8 text-center text-lg-start">
                             <h3><a>Cybersecurity Education <span>Games</span></a></h3>
                         </div>
                     </div>
@@ -53,12 +58,11 @@
 
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-                        <li><a class="nav-link scrollto" href="#services">Our Research</a></li>
-                        <li><a class="nav-link scrollto" href="#services">GenCyber</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                        <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                        <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
+                        <li><a class="nav-link scrollto" href="index.php#about">About Us</a></li>
+                        <li><a class="nav-link scrollto" href="index.php#">Our Research</a></li>
+                        <li><a class="nav-link scrollto" href="index.php#game">Games</a></li>
+                        <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
                     </ul>
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
@@ -75,8 +79,8 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h2>Game Details</h2>
                         <ol>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="game.html">Game</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="index.php#game">Games</a></li>
                             <li>Game Details</li>
                         </ol>
                     </div>
@@ -87,94 +91,49 @@
             <!-- ======= Game Details Section ======= -->
             <section id="game-details" class="game-details">
                 <div class="container">
-
                     <div class="row gy-4">
-
-                        <div class="col-lg-7">
+                        <div class="col-lg-7" data-aos="fade-right">
                             <div class="game-details-slider swiper-container">
                                 <div class="swiper-wrapper align-items-center">
-
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/games/anti-phishing-phil/anti-phishing-phil1.png" alt="">
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/games/anti-phishing-phil/anti-phishing-phil2.png" alt="">
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/games/anti-phishing-phil/anti-phishing-phil3.png" alt="">
-                                    </div>
-
+                                    <?= createSwiperSlide($game["screenshots"]) ?>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
                         </div>
 
-                        <div class="col-lg-5">
+                        <div class="col-lg-5" data-aos="fade-left">
                             <div class="game-info">
-                                <h3>Anti-Phishing Phil</h3>
+                                <h3><?= $game["name"] ?></h3>
                                 <ul>
                                     <li><strong>Category</strong>: Cybersecurity Game</li>
                                     <li><strong>Audiences</strong>: </li>
                                     <li>
                                         <div class="row game-mapping">
-                                            <div class="col-md-5">
-                                                <p><span class="material-icons">
-                                                        check_circle
-                                                    </span>College</p>
-                                                <p><span class="material-icons">
-                                                        unpublished
-                                                    </span>Industry</p>
+                                            <div class="col-md-6">
+                                                <p><?= audiencesCheck($game["audiences"][0]) ?>High-school Students</p>
+                                                <p><?= audiencesCheck($game["audiences"][1]) ?>K-12 Teachers</p>
                                             </div>
-                                            <div class="col-md-7">
-                                                <p><span class="material-icons">
-                                                        unpublished
-                                                    </span>K-12 Teachers</p>
-                                                <p><span class="material-icons">
-                                                        check_circle
-                                                    </span>Highschool Students</p>
+                                            <div class="col-md-6">
+                                                <p><?= audiencesCheck($game["audiences"][2]) ?>College</p>
+                                                <p><?= audiencesCheck($game["audiences"][3]) ?>Industry</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li><strong>Mapping(s)</strong>: </li>
                                     <li>
                                         <div class="row game-mapping">
-                                            <div class="col-md-5">
-                                                <p>CSEC2017</p>
-                                                <p><span class="material-icons">
-                                                        arrow_forward_ios
-                                                    </span>Data Security
-                                                </p>
-                                                <p><span class="material-icons">
-                                                        arrow_forward_ios
-                                                    </span>Human Security
-                                                </p>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <p>NICE Framework</p>
-                                                <p><span class="material-icons">
-                                                        arrow_forward_ios
-                                                    </span>Analyze</p>
-                                                <p><span class="material-icons">
-                                                        arrow_forward_ios
-                                                    </span>Protect and Defend</p>
-                                            </div>
+                                            <?= gameMappings($game["mappings"]) ?>
                                         </div>
                                     </li>
                                     <li><strong>Game URL</strong>: <a
-                                            href="https://www.ucl.ac.uk/cert/antiphishing/">https://www.ucl.ac.uk/cert/antiphishing/</a>
+                                            href="<?= $game["url"] ?>" target="_blank"><?= $game["url"] ?></a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="game-description">
                                 <h2>Description:</h2>
                                 <p>
-                                    Anti-Phishing Phil is an interactive game that teaches users how to identify
-                                    phishing URLs, where to look for cues in web browsers, and how to use search engines
-                                    to find legitimate sites. Users will play as Phil, a young fish trying to find food
-                                    while avoiding the dangers lurking in InterWeb Bay. Help Phil determine which worms
-                                    - or URLs - are safe and which are untrustworthy.
+                                    <?= $game["description"] ?>
                                 </p>
                             </div>
                         </div>
@@ -183,6 +142,40 @@
 
                 </div>
             </section><!-- End Game Details Section -->
+
+            <!-- You may interest !UNFINISHED-->
+            <section class="game-details-bg p-5">
+                <div class="container">
+                    <div class="game">
+                        <h4 class="pb-2">You may also be interested:</h4>
+                        <div class="row game-container">
+                            <!--<div class="col-lg-3 col-md-6">
+                                <p>Hello</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p>Hello</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p>Hello</p>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <p>Hello</p>
+                            </div>-->
+                            <?php
+                            $count = 0; 
+                            for($i = 0; $i < count($games); $i++) {
+                                if ($i != $_GET['index']) {
+                                    createGameCardS($games[$i], $i);
+                                    $count++;
+                                }
+                                if ($count == 4) {
+                                    break;
+                                }
+                            }?>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </main><!-- End #main -->
 

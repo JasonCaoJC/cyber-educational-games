@@ -1,3 +1,6 @@
+<?php
+    require_once("functions.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,66 +34,47 @@
 
 <body>
     <div class="main-container">
-        
-
         <!-- ======= Hero Section ======= -->
         <section id="hero">
             <!-- ======= Header ======= -->
-        <header id="header">
-            <div class="container d-flex align-items-center justify-content-between">
-
-                <div class="logo">
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                            <a href="index.html">
-                                <img src="assets/img/logo1.png" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8">
-                            <h3><a>Cybersecurity Education <span>Games</span></a></h3>
+            <header id="header">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <a href="index.php">
+                                    <img src="assets/img/logo1.png" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 text-center text-lg-start">
+                                <h3><a>Cybersecurity Education <span>Games</span></a></h3>
+                            </div>
                         </div>
                     </div>
+
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                            <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+                            <li><a class="nav-link scrollto" href="#">Our Research</a></li>
+                            <li><a class="nav-link scrollto" href="#game">Games</a></li>
+                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        </ul>
+                        <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
                 </div>
+            </header><!-- End Header -->
 
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-                        <li><a class="nav-link scrollto" href="#services">Our Research</a></li>
-                        <li><a class="nav-link scrollto" href="#services">GenCyber</a></li>
-                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                        <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->
-
-            </div>
-        </header><!-- End Header -->
-        
             <div class="container">
                 <div class="center">
                     <div class="row d-flex align-items-center">
-                        <div class="col-lg-7 py-5 py-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                        <div class="col-lg-7 py-5 py-lg-0 order-2 order-lg-1 text-center text-lg-start text-light"
+                            data-aos="fade-right">
                             <h1>Cybersecurity Education Games Classify & Gap Analysis </h1>
                             <br>
-                            <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis voluptate odio amet qui
-                                quia
-                                officia
-                                enim
-                                voluptates magnam, veritatis, quidem numquam dolor eaque. Quidem sapiente atque
-                                asperiores
-                                laboriosam
-                                repellendus ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-                                voluptate
-                                odio amet qui
-                                quia officia
-                                enim
-                                voluptates magnam, veritatis, quidem numquam dolor eaque. Quidem sapiente atque
-                                asperiores
-                                laboriosam
-                                repellendus ullam.</h6>
+                            <p class="fs-6">Welcome to the Cybersecurity Education Game resource hub. Our repository includes games that cover a variety of cybersecurity topics and are intended for various audiences. Click on "Get Started" to explore our list of games or "Survey" to provide us with feedback. You can also check the "About Us" section to learn more about our research and our team or "Contact" if you have any questions.</p>
                             <br>
-                            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                            <a href="#game" class="btn-get-started scrollto">Get Started</a>
                         </div>
                         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="fade-left">
                             <img src="assets/img/hero.png" class="img-fluid" alt="">
@@ -102,18 +86,51 @@
         </section><!-- End Hero -->
 
         <main id="main">
+            <!-- ======= Game Section ======= -->
+            <section id="game" class="game section-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 data-aos="fade-in">Games</h2>
+                        <!--
+                        <p data-aos="fade-in">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+                            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et
+                            nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic
+                            quas.</p>
+                        -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul id="game-flters">
+                                <li data-filter="*" class="filter-active">All</li>
+                                <li data-filter=".filter-students">High-school Students</li>
+                                <li data-filter=".filter-teachers">K-12 Teachers</li>
+                                <li data-filter=".filter-college">Collage</li>
+                                <li data-filter=".filter-industry">Industry</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row game-container" data-aos="fade-up">
+                        <?php for($i = 0; $i < count($games); $i++) {?>
+                        <?= createGameCard($games[$i], $i); }?>
+                </div>
+            </section><!-- End Portfolio Section -->
+
             <!-- ======= Testimonials ======= -->
             <section id="testimonials" class="testimonials section-bg">
                 <div class="container">
 
                     <div class="section-title">
                         <h2>Reviews</h2>
+                        <!--
                         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
                             Sit
                             sint
                             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
                             Quia fugiat sit
                             in iste officiis commodi quidem hic quas.</p>
+                        -->
                     </div>
                     <div class="row">
                         <div class="col-lg-3">
@@ -183,6 +200,7 @@
 
                     <div class="section-title">
                         <h2>Contact</h2>
+                        <!--
                         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
                             Sit
                             sint
@@ -190,6 +208,7 @@
                             Quia fugiat
                             sit
                             in iste officiis commodi quidem hic quas.</p>
+                        -->
                     </div>
 
                     <div class="row">
