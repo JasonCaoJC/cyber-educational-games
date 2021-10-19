@@ -105,7 +105,7 @@
                                 <li data-filter="*" class="filter-active">All</li>
                                 <li data-filter=".filter-students">High-school Students</li>
                                 <li data-filter=".filter-teachers">K-12 Teachers</li>
-                                <li data-filter=".filter-college">Collage</li>
+                                <li data-filter=".filter-college">College</li>
                                 <li data-filter=".filter-industry">Industry</li>
                             </ul>
                         </div>
@@ -113,24 +113,22 @@
 
                     <div class="row game-container" data-aos="fade-up">
                         <?php for($i = 0; $i < count($games); $i++) {?>
-                        <?= createGameCard($games[$i], $i); }?>
+                        <?php createGameCard($games[$i], $i); }?>
                 </div>
             </section><!-- End Portfolio Section -->
 
-            <!-- ======= Testimonials ======= -->
+            <!-- ======= Testimonials ======= 
             <section id="testimonials" class="testimonials section-bg">
                 <div class="container">
 
                     <div class="section-title">
                         <h2>Reviews</h2>
-                        <!--
                         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
                             Sit
                             sint
                             consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
                             Quia fugiat sit
                             in iste officiis commodi quidem hic quas.</p>
-                        -->
                     </div>
                     <div class="row">
                         <div class="col-lg-3">
@@ -193,6 +191,7 @@
 
                 </div>
             </section>
+            -->
 
             <!-- ======= Contact Section ======= -->
             <section id="contact" class="contact section-bg">
