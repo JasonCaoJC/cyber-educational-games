@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Cybersecurity Education Games</title>
+    <title>Studying Alignment of Cybersecurity Education Games</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -47,7 +47,7 @@
                                 </a>
                             </div>
                             <div class="col-xs-8 col-sm-8 col-md-8 text-center text-lg-start">
-                                <h3><a>Cybersecurity Education <span>Games</span></a></h3>
+                                <h3><a>Studying Alignment of<br><span>Cybersecurity Education Games</span></a></h3>
                             </div>
                         </div>
                     </div>
@@ -55,8 +55,10 @@
                     <nav id="navbar" class="navbar">
                         <ul>
                             <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                            <!--
                             <li><a class="nav-link scrollto" href="#about">About Us</a></li>
                             <li><a class="nav-link scrollto" href="#">Our Research</a></li>
+                            -->
                             <li><a class="nav-link scrollto" href="#game">Games</a></li>
                             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                         </ul>
@@ -70,11 +72,20 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-7 py-5 py-lg-0 order-2 order-lg-1 text-center text-lg-start text-light"
                             data-aos="fade-right">
-                            <h1>Cybersecurity Education Games Classify & Gap Analysis </h1>
+                            <h1>Studying Alignment of Cybersecurity Education Games With Academic Benchmarks & Industry Standards, and
+                                Analyzing Gaps</h1>
+                            <!--<p class="lead fw-bold fst-italic">With Academic Benchmarks & Industry Standards, and
+                                Analyzing Gaps</p>-->
                             <br>
-                            <p class="fs-6">Welcome to the Cybersecurity Education Game resource hub. Our repository includes games that cover a variety of cybersecurity topics and are intended for various audiences. Click on "Get Started" to explore our list of games or "Survey" to provide us with feedback. You can also check the "About Us" section to learn more about our research and our team or "Contact" if you have any questions.</p>
+                            <p class="fs-6">Welcome to the Studying Alignment of Cybersecurity Education Games With
+                                Academic Benchmarks & Industry Standards, and Analyzing Gaps resource. Our repository
+                                includes games that cover a variety of cybersecurity topics and are intended for various
+                                audiences. Click on "Get Started" to explore our list of games or "Survey" to provide us
+                                with feedback. You can also check the "About Us" section to learn more about our
+                                research and our team or "Contact" if you have any questions.</p>
                             <br>
                             <a href="#game" class="btn-get-started scrollto">Get Started</a>
+                            <!--<a href="#" class="btn-get-started scrollto">Take a survey</a>-->
                         </div>
                         <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="fade-left">
                             <img src="assets/img/hero.png" class="img-fluid" alt="">
@@ -114,7 +125,7 @@
                     <div class="row game-container" data-aos="fade-up">
                         <?php for($i = 0; $i < count($games); $i++) {?>
                         <?php createGameCard($games[$i], $i); }?>
-                </div>
+                    </div>
             </section><!-- End Portfolio Section -->
 
             <!-- ======= Testimonials ======= 
@@ -284,7 +295,8 @@
         <footer id="footer">
             <div class="container footer-bottom clearfix">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Cybersecurity Education Game</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Cybersecurity Education Game R&D Team:</span></strong> Ankur Chattopadhyay, Trung Cao, Laura Nestor, Carlee Franklin.
+                    All Rights Reserved
                 </div>
             </div>
         </footer><!-- End Footer -->

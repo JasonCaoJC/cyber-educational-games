@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Cybersecurity Education Games</title>
+    <title>Studying Alignment of Cybersecurity Education Games</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -41,34 +41,34 @@
     <div class="main-container">
         <!-- ======= Header ======= -->
         <header id="header" class="header">
-            <div class="container d-flex align-items-center justify-content-between">
-
-                <div class="logo">
-                    <div class="row">
-                        <div class="col-xs-2 col-sm-2 col-md-2">
-                            <a href="index.php">
-                                <img src="assets/img/logo1.png" alt="" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 text-center text-lg-start">
-                            <h3><a>Cybersecurity Education <span>Games</span></a></h3>
+                <div class="container d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <a href="index.php">
+                                    <img src="assets/img/logo1.png" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 text-center text-lg-start">
+                                <h3><a>Studying Alignment of<br><span>Cybersecurity Education Games</span></a></h3>
+                            </div>
                         </div>
                     </div>
+
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
+                            <!--
+                            <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+                            <li><a class="nav-link scrollto" href="#">Our Research</a></li>
+                            -->
+                            <li><a class="nav-link scrollto" href="index.php#game">Games</a></li>
+                            <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
+                        </ul>
+                        <i class="bi bi-list mobile-nav-toggle"></i>
+                    </nav><!-- .navbar -->
                 </div>
-
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto active" href="index.php#hero">Home</a></li>
-                        <li><a class="nav-link scrollto" href="index.php#about">About Us</a></li>
-                        <li><a class="nav-link scrollto" href="index.php#">Our Research</a></li>
-                        <li><a class="nav-link scrollto" href="index.php#game">Games</a></li>
-                        <li><a class="nav-link scrollto" href="index.php#contact">Contact</a></li>
-                    </ul>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->
-
-            </div>
-        </header><!-- End Header -->
+            </header><!-- End Header -->
 
         <main id="main">
 
@@ -149,18 +149,6 @@
                     <div class="game">
                         <h4 class="pb-2">You may also be interested:</h4>
                         <div class="row game-container">
-                            <!--<div class="col-lg-3 col-md-6">
-                                <p>Hello</p>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <p>Hello</p>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <p>Hello</p>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <p>Hello</p>
-                            </div>-->
                             <?php
                             $count = 0; 
                             for($i = 0; $i < count($games); $i++) {
@@ -183,7 +171,8 @@
         <footer id="footer">
             <div class="container footer-bottom clearfix">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>Cybersecurity Education Game</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>Cybersecurity Education Game R&D Team:</span></strong> Ankur Chattopadhyay, Trung Cao, Laura Nestor, Carlee Franklin.
+                    All Rights Reserved
                 </div>
             </div>
         </footer><!-- End Footer -->
